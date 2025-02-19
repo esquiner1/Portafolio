@@ -1,0 +1,93 @@
+---
+import NextJS from '../icons/NextJS.astro'
+import Tailwind from '../icons/Tailwind.astro'
+import SocialPill from './SocialPill.astro';
+import GitHub from '../icons/GitHub.astro';
+import Preview from '../icons/Preview.astro';
+
+const TAGS = {
+    NEXT:{
+        name: 'Next.js',
+        class: 'bg-black text-white',
+        icon: NextJS
+    },
+    TAILWIND:{
+        name: 'Tailwind',
+        class: 'bg-[#003159] text-white',
+        icon: Tailwind
+    }
+}
+const PROJECTS = [
+{
+    title: 'Proyecto 1',
+    description: 'loreesaa jaskajsdkjb jsadasjkdnaj andolaiknsdlkas asdnapsjdkpsd jasdasndpoaksndk iasdlkjasdlk asdnlkasjdlk iaksldknd',
+    link:'#',
+    github: '#',
+    image: 'proyecto.jpg',
+    tags: [TAGS.NEXT,TAGS.TAILWIND],
+    
+    
+},
+{
+    title: 'Proyecto 2',
+    description: 'loreesaa jaskajsdkjb jsadasjkdnaj andolaiknsdlkas asdnapsjdkpsd jasdasndpoaksndk iasdlkjasdlk asdnlkasjdlk iaksldknd',
+    link:'#',
+    github: '#',
+    image: 'proyecto2.jpg',
+    tags: [TAGS.NEXT,TAGS.TAILWIND],
+    order:'order-2'
+},
+{
+    title: 'Proyecto 3',
+    description: 'loreesaa jaskajsdkjb jsadasjkdnaj andolaiknsdlkas asdnapsjdkpsd jasdasndpoaksndk iasdlkjasdlk asdnlkasjdlk iaksldknd',
+    link:'#',
+    github: '#',
+    image: 'proyecto2.jpg',
+    tags: [TAGS.NEXT,TAGS.TAILWIND],
+  
+}
+
+]
+---
+
+{
+    PROJECTS.map(({title, description, tags, image, order}) =>(
+    <div class="flex flex-col gap-y-16 mb-15">
+        
+        <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+         <div class={`w-full md:w-1/2 ${order}`} >
+            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                <img class="transition-all duration-300 rounded-lg blur-xs hover:blur-none" src={image} alt={`Captura de pantalla del proyecto ${image}`}>
+            </div>
+         </div>
+        
+        <div class="w-full md:w-1/2 md:max-w-lg" >
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-4 flex-row mb-2">
+                {tags.map(tag =>(
+                    <li>
+                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                        <tag.icon class="size-4"/>
+                        {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <nav class="flex gap-5 mt-4 flex-wrap">
+                <SocialPill href="#">
+                    <GitHub class ="size-4 md:size-6"></GitHub>
+                    GitHub
+                </SocialPill>
+                <SocialPill href="#">
+                    <Preview class ="size-4 md:size-6"></Preview>
+                    Preview
+                </SocialPill> 
+            </nav>
+
+        </div>
+        </article>
+        
+    </div>
+    ))
+ }

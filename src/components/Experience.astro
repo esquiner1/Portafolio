@@ -1,0 +1,33 @@
+---
+
+import ExperienceItem from "./ExperienceItem.astro"
+
+
+const EXPIRIENCIE = [
+{
+    title: 'Analista de desarrollo TID (Practicante)',
+    company: 'Seguros de vida Suramericana S.A',
+    date: '1 de febrero de 2024 - 31 de enero del 2025',
+    description: 'loreesaa jaskajsdkjb jsadasjkdnaj andolaiknsdlkas asdnapsjdkpsd jasdasndpoaksndk iasdlkjasdlk asdnlkasjdlk iaksldknd',
+    link:'#',
+    work:'El último'
+},
+{
+    title: 'Operativo GPS',
+    company: 'Syspontec SAS',
+    date: 'Released on January 13th, 2022',
+    description: 'sdadasdasdasfas',
+}
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-5"> 
+    {
+       EXPIRIENCIE.map(experiencie =>(
+        <li class="mb-10 ms-6">
+            <ExperienceItem {...experiencie}/>
+        </li>
+       ))
+    }
+</ol>
+

@@ -1,0 +1,70 @@
+
+<header class = "fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
+
+    <nav id="animatedNav" class="flex px-3 text-sm font-medium rounded-full  justify-center items-center bg-[##00091C]">
+        <a class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500 text-white" href="/#top">Inicio</a>
+        <a class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500 text-white" href="/#experiencia">Experiencia</a>
+        <a class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500 text-white" href="/#proyectos">Proyectos</a>
+        <a class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500 text-white" href="#sobre-mi">Sobre mi</a>
+        <a class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500 text-white" href="mailto:miguel.aguirre12@utp.edu.co">Contacto</a>
+
+    </nav>
+
+    <script>
+
+
+      const animatedNav = document.getElementById('animatedNav');
+
+
+      window.addEventListener('scroll',() =>{
+        animatedNav?.classList.add('bg-[#1f2937e6]','shadow-lg','shadow-white/8');
+
+        const isAtTop = window.scrollY === 0;
+        const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight;
+
+        if (isAtTop) {
+          animatedNav?.classList.remove('bg-[#1f2937e6]','shadow-lg','shadow-white/8');
+        }
+
+
+
+        });
+
+
+        
+
+
+
+       
+    //     const navLinks = document.querySelectorAll('.nav-link');
+    //     const sections = document.querySelectorAll('section');
+
+    // window.addEventListener('scroll', () => {
+    //   let current:string;
+
+    //   // Recorre las secciones para ver cuál está en la vista
+    //   sections.forEach(section => {
+    //     const sectionTop = section.offsetTop;
+    //     const sectionHeight = section.clientHeight;
+
+    //     if (pageYOffset >= sectionTop - sectionHeight / 2) {
+    //       const id = section.getAttribute('id');
+    //       if (id) { 
+    //         current = id;
+    //       }
+    //     }
+    //   });
+
+    //   // Resalta el enlace correspondiente
+    //   navLinks.forEach(link => {
+    //     link.classList.remove('text-blue-500', 'font-bold'); // Quita estilos activos
+    //     if (link.getAttribute('href')!.includes(current)) {
+    //       link.classList.add('text-blue-500', 'font-bold'); // Aplica estilos activos
+    //     }
+    //   });
+    // });
+
+    </script>
+      
+
+</header>
