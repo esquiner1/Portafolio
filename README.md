@@ -9,7 +9,7 @@ Este portafolio esta creado con Astro, y les comparto un poco de el:
 
 ## Imagen de porafolio
 
-![App Screenshot](https://wallpapers.com/images/featured-full/imagenes-en-3d-con-magia-visual-s5ilb6mgtl0shhvx.jpg)
+![App Screenshot](https://tailwindcss.com/docs/installation/using-vite)
 
 
 Para ver directamente mi portafolio te invito a que lo visites: 
