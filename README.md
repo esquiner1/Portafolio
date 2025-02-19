@@ -9,7 +9,8 @@ Este portafolio esta creado con Astro, y les comparto un poco de el:
 
 ## Imagen de porafolio
 
-![App Screenshot](CapturaDePantalla.png)
+![image](https://github.com/user-attachments/assets/6e92cd03-55db-4d32-a813-f1eb9a47ac34)
+
 
 
 Para ver directamente mi portafolio te invito a que lo visites: 
