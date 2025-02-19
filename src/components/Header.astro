@@ -10,61 +10,18 @@
 
     </nav>
 
-    <script>
-
-
+  <script is:inline>
       const animatedNav = document.getElementById('animatedNav');
-
-
       window.addEventListener('scroll',() =>{
         animatedNav?.classList.add('bg-[#1f2937e6]','shadow-lg','shadow-white/8');
 
         const isAtTop = window.scrollY === 0;
-        const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight;
 
         if (isAtTop) {
           animatedNav?.classList.remove('bg-[#1f2937e6]','shadow-lg','shadow-white/8');
         }
-
-
-
         });
-
-
-        
-
-
-
-       
-    //     const navLinks = document.querySelectorAll('.nav-link');
-    //     const sections = document.querySelectorAll('section');
-
-    // window.addEventListener('scroll', () => {
-    //   let current:string;
-
-    //   // Recorre las secciones para ver cuál está en la vista
-    //   sections.forEach(section => {
-    //     const sectionTop = section.offsetTop;
-    //     const sectionHeight = section.clientHeight;
-
-    //     if (pageYOffset >= sectionTop - sectionHeight / 2) {
-    //       const id = section.getAttribute('id');
-    //       if (id) { 
-    //         current = id;
-    //       }
-    //     }
-    //   });
-
-    //   // Resalta el enlace correspondiente
-    //   navLinks.forEach(link => {
-    //     link.classList.remove('text-blue-500', 'font-bold'); // Quita estilos activos
-    //     if (link.getAttribute('href')!.includes(current)) {
-    //       link.classList.add('text-blue-500', 'font-bold'); // Aplica estilos activos
-    //     }
-    //   });
-    // });
-
-    </script>
+  </script>
       
 
 </header>
