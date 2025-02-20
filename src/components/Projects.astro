@@ -1,9 +1,17 @@
 ---
+import SocialPill from './SocialPill.astro';
+
 import NextJS from '../icons/NextJS.astro'
 import Tailwind from '../icons/Tailwind.astro'
-import SocialPill from './SocialPill.astro';
 import GitHub from '../icons/GitHub.astro';
 import Preview from '../icons/Preview.astro';
+import Java from '../icons/Java.astro';
+import PostgreSQL from '../icons/PostgreSQL.astro';
+import Python from '../icons/Python.astro';
+import Cmm from '../icons/Cmm.astro';
+import NestJS from '../icons/NestJS.astro';
+import React from '../icons/React.astro';
+import Docker from '../icons/Docker.astro';
 
 const TAGS = {
     NEXT:{
@@ -15,35 +23,70 @@ const TAGS = {
         name: 'Tailwind',
         class: 'bg-[#003159] text-white',
         icon: Tailwind
-    }
+    },
+    JAVA:{
+        name: 'Java',
+        class: 'bg-[#003159] text-white',
+        icon: Java
+    },
+    POSTGRESQL:{
+        name: 'PostgreSQL',
+        class: 'bg-[#003159] text-white',
+        icon: PostgreSQL
+    },
+    PYTHON:{
+        name: 'Python',
+        class: 'bg-[#ffeaa8] text-black',
+        icon: Python
+    },
+    CMM:{
+        name: 'C++',
+        class: 'bg-[#003159] text-white',
+        icon: Cmm
+    },
+    NESTJS:{
+        name: 'NestJS',
+        class: 'bg-[#003159] text-white',
+        icon: NestJS
+    },
+    REACT:{
+        name: 'React',
+        class: 'bg-[#003159] text-white',
+        icon: React
+    },
+    DOCKER:{
+        name: 'Docker',
+        class: 'bg-[#003159] text-white',
+        icon: Docker
+    },
+
 }
 const PROJECTS = [
 {
-    title: 'Proyecto 1',
-    description: 'loreesaa jaskajsdkjb jsadasjkdnaj andolaiknsdlkas asdnapsjdkpsd jasdasndpoaksndk iasdlkjasdlk asdnlkasjdlk iaksldknd',
+    title: 'Sistema de Monitoreo de Sensores de un Vehículo con ESP32 y Java',
+    description: 'Este sistema permitirá monitorear parámetros clave de un vehículo en tiempo real utilizando un ESP32 como unidad de adquisición de datos. La información se transmitirá mediante Wi-Fi o Bluetooth a una plataforma desarrollada en Java, que mostrará los datos en gráficos y permitirá almacenarlos para su análisis.',
     link:'#',
     github: '#',
     image: 'proyecto.jpg',
-    tags: [TAGS.NEXT,TAGS.TAILWIND],
-    
-    
+    tags: [TAGS.JAVA,TAGS.POSTGRESQL,TAGS.PYTHON],
+
 },
 {
-    title: 'Proyecto 2',
-    description: 'loreesaa jaskajsdkjb jsadasjkdnaj andolaiknsdlkas asdnapsjdkpsd jasdasndpoaksndk iasdlkjasdlk asdnlkasjdlk iaksldknd',
+    title: 'Cifrado y Autenticación en Comunicaciones dos Esp32',
+    description: 'Este proyecto simulará la comunicación segura entre dos dispositivos embebidos en un entorno automotriz. Se implementarán técnicas de cifrado AES-128 y autenticación HMAC para garantizar la confidencialidad y la integridad de los datos transmitidos. El sistema también podrá detectar intentos de acceso no autorizado.',
     link:'#',
     github: '#',
     image: 'proyecto2.jpg',
-    tags: [TAGS.NEXT,TAGS.TAILWIND],
+    tags: [TAGS.JAVA,TAGS.CMM],
     order:'md:order-2'
 },
 {
-    title: 'Proyecto 3',
-    description: 'loreesaa jaskajsdkjb jsadasjkdnaj andolaiknsdlkas asdnapsjdkpsd jasdasndpoaksndk iasdlkjasdlk asdnlkasjdlk iaksldknd',
+    title: 'Sistema de Gestión para Restaurantes o Cafeterías',
+    description: 'El sistema permitirá a los restaurantes gestionar pedidos, controlar el inventario, administrar el menú y realizar un seguimiento de sus empleados. Incluirá un panel administrativo para supervisar las operaciones diarias y generar reportes de ventas y consumo de inventario.',
     link:'#',
     github: '#',
     image: 'proyecto2.jpg',
-    tags: [TAGS.NEXT,TAGS.TAILWIND],
+    tags: [TAGS.NESTJS,TAGS.REACT,TAGS.DOCKER],
   
 }
 
