@@ -12,8 +12,15 @@ import Cmm from '../icons/Cmm.astro';
 import NestJS from '../icons/NestJS.astro';
 import React from '../icons/React.astro';
 import Docker from '../icons/Docker.astro';
+import Carousel from './Carousel.astro';
+import Altium from '../icons/Altium.astro';
+import Adobe from '../icons/Adobe.astro';
+import Pdf from '../icons/Pdf.astro';
+import Git from '../icons/git.astro';
+import IconoAstro from '../icons/IconoAstro.astro';
+import Azure from '../icons/Azure.astro';
 
-const TAGS = {
+export const TAGS = {
     NEXT:{
         name: 'Next.js',
         class: 'bg-black text-white',
@@ -36,7 +43,7 @@ const TAGS = {
     },
     PYTHON:{
         name: 'Python',
-        class: 'bg-[#ffeaa8] text-black',
+        class: 'bg-[#003159] text-white',
         icon: Python
     },
     CMM:{
@@ -59,78 +66,122 @@ const TAGS = {
         class: 'bg-[#003159] text-white',
         icon: Docker
     },
-
+    ALTIUM:{
+        name: 'Altium',
+        class: 'bg-white text-black',
+        icon: Altium
+    },
+    GIT:{
+        name: 'Git',
+        class: 'bg-[#003159] text-white',
+        icon: Git
+    },
+    ASTRO:{
+        name: 'Astro',
+        class: 'bg-[#003159] text-white',
+        icon: IconoAstro
+    },
+    AZURE:{
+        name: 'Azure',
+        class: 'bg-[#003159] text-white',
+        icon: Azure
+    },
+    
 }
 const PROJECTS = [
 {
-    title: 'Sistema de Monitoreo de Sensores de un Vehículo con ESP32 y Java',
-    description: 'Este sistema permitirá monitorear parámetros clave de un vehículo en tiempo real utilizando un ESP32 como unidad de adquisición de datos. La información se transmitirá mediante Wi-Fi o Bluetooth a una plataforma desarrollada en Java, que mostrará los datos en gráficos y permitirá almacenarlos para su análisis.',
-    link:'#',
-    github: '#',
-    image: 'proyecto.jpg',
-    tags: [TAGS.JAVA,TAGS.POSTGRESQL,TAGS.PYTHON],
+    title: 'Sistema de Control Ambiental con ESP32',
+    description: "Sistema basado en ESP32 para medir y controlar la temperatura y humedad de un refrigerador. Incluye una PCB diseñada en Altium Designer con etapas de potencia y control, ademas se le realizó el firmware que permite la transmisión datos vía USB y Wi-Fi.",
+    link:'https://youtu.be/8B1sifag6EQ',
+    github: 'https://github.com/esquiner1/Firmware-Sistema-Ambiental',
+    pdf:true,
+    images: ['Placas.jpg'],
+    tags: [TAGS.ALTIUM,TAGS.PYTHON],
+    order:'order:1'
 
 },
-{
-    title: 'Cifrado y Autenticación en Comunicaciones dos Esp32',
-    description: 'Este proyecto simulará la comunicación segura entre dos dispositivos embebidos en un entorno automotriz. Se implementarán técnicas de cifrado AES-128 y autenticación HMAC para garantizar la confidencialidad y la integridad de los datos transmitidos. El sistema también podrá detectar intentos de acceso no autorizado.',
-    link:'#',
-    github: '#',
-    image: 'proyecto2.jpg',
-    tags: [TAGS.JAVA,TAGS.CMM],
-    order:'md:order-2'
-},
-{
-    title: 'Sistema de Gestión para Restaurantes o Cafeterías',
-    description: 'El sistema permitirá a los restaurantes gestionar pedidos, controlar el inventario, administrar el menú y realizar un seguimiento de sus empleados. Incluirá un panel administrativo para supervisar las operaciones diarias y generar reportes de ventas y consumo de inventario.',
-    link:'#',
-    github: '#',
-    image: 'proyecto2.jpg',
-    tags: [TAGS.NESTJS,TAGS.REACT,TAGS.DOCKER],
+// {
+//     title: 'Sistema de Monitoreo de Sensores de un Vehículo con ESP32 y Java',
+//     description: 'Este sistema permitirá monitorear parámetros clave de un vehículo en tiempo real utilizando un ESP32 como unidad de adquisición de datos. La información se transmitirá mediante Wi-Fi o Bluetooth a una plataforma desarrollada en Java, que mostrará los datos en gráficos y permitirá almacenarlos para su análisis.',
+//     link:'#',
+//     github: '#',
+//     images: ['proyecto.jpg'],
+//     tags: [TAGS.JAVA,TAGS.POSTGRESQL,TAGS.PYTHON],
+//     order:'md:order-2 md:ml-10 mr-0'
+
+// },
+// {
+//     title: 'Cifrado y Autenticación en Comunicaciones dos Esp32',
+//     description: 'Este proyecto simulará la comunicación segura entre dos dispositivos embebidos en un entorno automotriz. Se implementarán técnicas de cifrado AES-128 y autenticación HMAC para garantizar la confidencialidad y la integridad de los datos transmitidos. El sistema también podrá detectar intentos de acceso no autorizado.',
+//     link:'#',
+//     github: '#',
+//     images: ['proyecto2.jpg'],
+//     tags: [TAGS.JAVA,TAGS.CMM],
+// },
+// {
+//     title: 'Sistema de Gestión para Restaurantes o Cafeterías',
+//     description: 'El sistema permitirá a los restaurantes gestionar pedidos, controlar el inventario, administrar el menú y realizar un seguimiento de sus empleados. Incluirá un panel administrativo para supervisar las operaciones diarias y generar reportes de ventas y consumo de inventario.',
+//     link:'#',
+//     github: '#',
+//     images: ['proyecto2.jpg'],
+//     tags: [TAGS.NESTJS,TAGS.REACT,TAGS.DOCKER],
+//     order:'md:order-2 md:ml-10 mr-0 '
   
-}
+// }
 
 ]
 ---
 
 {
-    PROJECTS.map(({title, description, tags, image, order}) =>(
-    <div class="flex flex-col gap-y-16 mb-15">
-        
-        <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-         <div class={`w-full md:w-1/2 ${order}`} >
-            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-                <img class="transition-all duration-300 md:blur-xs hover:blur-none" src={image} alt={`Captura de pantalla del proyecto ${image}`}>
+PROJECTS.map(({title, description, tags, images, order, link, github}, index) =>(
+    <div class="flex flex-col gap-y-16 mb-15">    
+        <article class="rounded-xl  flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+         <div class={`w-full md:w-1/2 ${order} flex flex-col items-center justify-center`} >
+            {/* <img class="transition-all duration-300 md:blur-xs hover:blur-none" src={images[0]} alt={`Captura de pantalla del proyecto ${images[0]}`}> */}
+            <div class="relative overflow-hidden  col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl  rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                <img class="h-65 object-cover duration-700 ease-in-out" src={images[0]} alt={`Captura de pantalla del proyecto ${images[0]}`}>
             </div>
+            {/* <Carousel src={images}></Carousel> */}
+         
          </div>
         
         <div class="w-full md:w-1/2 md:max-w-lg" >
-            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
-            <p class="text-lg mb-4 text-pretty">{description}</p>
-            <ul class="flex gap-x-4 flex-row mb-2">
+            <h3 class="text-2xl text-justify  font-semibold text-yellow-200 mb-2">{title}</h3>
+            <ul class="flex gap-x-4 flex-row mb-2 mt-5">
                 {tags.map(tag =>(
                     <li>
                         <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
-                        <tag.icon class="size-4"/>
+                        <tag.icon class="size-5"/>
                         {tag.name}
                         </span>
                     </li>
                 ))}
             </ul>
-            <nav class="flex gap-5 mt-4 flex-wrap">
-                <SocialPill href="#">
+            <p class="text-justify mb-4 text-pretty text-[#c5ccdb]">{description}</p>
+            <nav class="flex justify-center gap-5 mt-4 flex-wrap">
+                <SocialPill href={github}>
                     <GitHub class ="size-4 md:size-6"></GitHub>
                     GitHub
                 </SocialPill>
-                <SocialPill href="#">
+                <SocialPill href={link}>
                     <Preview class ="size-4 md:size-6"></Preview>
                     Preview
-                </SocialPill> 
-            </nav>
-
+                </SocialPill>
+                {
+                    index == 0 && (
+                        <SocialPill href="Informe.pdf">
+                            <Pdf class ="size-4 md:size-6"></Pdf>
+                            Doc Diseño
+                        </SocialPill>
+                        <SocialPill href="InformeFirmware.pdf">
+                            <Pdf class ="size-4 md:size-6"></Pdf>
+                            Doc Firmware
+                        </SocialPill> 
+                    )
+                }
+            </nav> 
         </div>
         </article>
-        
     </div>
     ))
  }

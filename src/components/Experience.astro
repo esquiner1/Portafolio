@@ -4,29 +4,44 @@ import ExperienceItem from "./ExperienceItem.astro"
 
 
 const EXPIRIENCIE = [
+
 {
     title: 'Analista de desarrollo TID (Practicante)',
     company: 'Seguros de vida Suramericana S.A',
-    date: '1 de febrero de 2024 - 31 de enero del 2025',
-    description: 'Me desempeñe como Analista de Desarrollo Tecnológico, participé en el desarrollo y mantenimiento de aplicaciones web utilizando Node.js y Angular, realizando pruebas unitarias y resolución de bugs. Apliqué herramientas como SonarQube para análisis de calidad y Checkmarx One para detección de vulnerabilidades. Además, gestioné procesos de integración y despliegue continuo (CI/CD) con Azure DevOps y colaboré estrechamente con el equipo para garantizar la eficiencia y seguridad del software.',
+    date: 'Febrero de 2024 - Enero del 2025',
+    description: 'Se optimizó la calidad de aplicativos mediante DevOps, usando Azure DevOps, SonarQube y Checkmarx One para automatizar CI/CD, reducir duplicados, eliminar errores y mitigar vulnerabilidades, logrando más del 80% de cobertura de código.',
     link:'#',
     work:'El último'
 },
 {
-    title: 'Operativo GPS',
-    company: 'Syspontec SAS',
-    date: 'Released on January 13th, 2022',
-    description: 'Participé en el levantamiento de información sobre los transformadores que abastecen la ciudad de Pereira y sus zonas circundantes, liderando el proceso de recopilación de datos, asegurando la precisión de la información y fomentando el trabajo en equipo con una comunicación efectiva',
-}
+    title: 'Monitor de Digitales',
+    company: 'Universidad Tecnológica de Pereira',
+    date: 'Agosto de 2022 - Diciembre de 2022',
+    description: 'Me desempeñé como monitor en la materia de Laboratorio de Digitales 3, brindando orientación y acompañamiento a los estudiantes para resolver sus dudas, utilizando las tecnologías como MicroPython y utilizando sistemas embebidos como el ESP32. Como resultado, se evidenció que un alto porcentaje de los estudiantes logró completar la materia satisfactoriamente.',
+},
+{
+    title: 'Monitor de Programación',
+    company: 'Universidad Tecnológica de Pereira',
+    date: 'Agosto de 2022 - Diciembre de 2022',
+    description: 'Me desempeñé como monitor en la materia de Programación 2, brindando orientación y acompañamiento a los estudiantes para resolver sus dudas, utilizando las tecnologías C++ y Python. Como resultado, se evidenció que un alto porcentaje de los estudiantes logró completar la materia satisfactoriamente',
+},
+// {
+//     title: 'Operativo GPS',
+//     company: 'Syspontec SAS',
+//     date: '9 de junio de 2022 - 9 de agosto de 2022',
+//     description: 'Participé en el levantamiento de información sobre los transformadores que abastecen la ciudad de Pereira y sus zonas circundantes, liderando el proceso de recopilación de datos, asegurando la precisión de la información y fomentando el trabajo en equipo con una comunicación efectiva',
+// }
+
 ]
+
 ---
 
 <ol class="relative border-s border-gray-200 ml-5"> 
     {
        EXPIRIENCIE.map(experiencie =>(
-        <li class="mb-10 ms-6">
-            <ExperienceItem {...experiencie}/>
-        </li>
+            <li class="mb-10 ms-6">
+                <ExperienceItem {...experiencie}/>
+            </li>
        ))
     }
 </ol>

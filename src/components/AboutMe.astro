@@ -1,13 +1,53 @@
-<article class ="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row" >
+---
+import { TAGS } from "./Projects.astro"
+
+
+const TagsUsados = [
+    TAGS.ALTIUM,
+    TAGS.CMM,
+    TAGS.PYTHON,
+    TAGS.REACT,
+    TAGS.JAVA,
+    TAGS.GIT,
+    TAGS.ASTRO,
+    TAGS.AZURE
+]
+
+
+---
+
+<article class ="flex flex-col items-center justify-center gap-8 text-[#c5ccdb] dark:text-gray-300 md:flex-row" >
     <div class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1">
         <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur voluptate, ipsum perferendis obcaecati aperiam quia, nostrum corrupti optio vel illum quis totam libero impedit blanditiis sit expedita, sunt vitae quasi?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam illum perspiciatis placeat minima et sint tempore modi cumque rerum debitis libero optio error tenetur, nisi amet consectetur quidem. Repellendus, illo.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cupiditate nam minus totam sequi, nesciunt quis eius perspiciatis unde id omnis provident fuga, debitis hic mollitia aspernatur reprehenderit facere. Adipisci!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed corporis atque earum voluptatibus dolor ratione beatae officiis? Libero ducimus, omnis quae sed labore earum voluptas? Molestias error nobis nesciunt tempore!
+            Desde pequeño, siempre me ha fascinado entender cómo funcionan las cosas, lo que despertó 
+            mi interés por la <strong>electrónica y la tecnología</strong>. Este interés tomó forma cuando me gradué como 
+            bachiller técnico en la especialidad de electricidad y electrónica. Allí descubrí mi pasión por 
+            los sistemas eléctricos y el desarrollo de Software, lo que me llevó a estudiar <strong>Ingeniería Electrónica</strong> en la <strong>Universidad Tecnológica 
+            de Pereira.</strong>
         </p>
+        <p>
+            Durante mi carrera, tuve mi primer acercamiento al <strong> desarrollo de software</strong> a través de proyectos 
+            académicos en C++ y Python además de desempeñarme como <strong>monitor</strong>. Poco a poco, 
+            fui combinando mis conocimientos en <strong>electrónica con el mundo del software</strong>.
+        </p>
+        <p>
+            Actualmente, busco seguir creciendo profesionalmente, con el objetivo de aportar soluciones 
+            innovadoras y eficientes.
+        </p>
+        <div class="mt-10">
+            <ul class="flex gap-x-4 flex-wrap mb-2 ">
+                {TagsUsados.map(tag =>(
+                    <li class="py-1">
+                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                        <tag.icon class="size-5"/>
+                        {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+        </div>
     </div>
 
     <img class="border-2 border-white-600 order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20 " src="FotoCasualEditada.jpg" alt="Foto fondo blanco Miguel">
-
 </article>
+

@@ -1,5 +1,4 @@
 ---
-import Bagde from '../components/Badge.astro';
 import SocialPill from './SocialPill.astro';
 import Experience from './Experience.astro';
 import Projects from './Projects.astro';
@@ -9,7 +8,6 @@ import AboutMe from './AboutMe.astro';
 import SectionContainer from './SectionContainer.astro';
 
 import Email from '../icons/Email.astro';
-import GitHub from '../icons/GitHub.astro';
 import LinkedIn from '../icons/LinkedIn.astro';
 import BriefCase from '../icons/BriefCase.astro';
 import CodeCircle from '../icons/CodeCircle.astro';
@@ -43,9 +41,10 @@ import User from '../icons/User.astro';
 			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
 				Hola, soy Miguel Angel 
 			</h1>
-			<h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]"> 
-				1 año de experiencia. <span class="text-yellow-200">Ingeniero Electrónico</span>.De Colombia. 
-				<span class="opacity-85">Especializado en el area de Software embebido y aplicaciones moviles </span>  
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]"> 
+				<span class="text-[#FEF08A]">Ingeniero Electrónico</span> de Pereira, Colombia. 
+				Tengo experiencia en<span class="text-[#FEF08A]"> desarrollo de software, con enfoque 
+					en software embebido y aseguramiento de calidad </span>. Me apasiona crear soluciones eficientes y seguras. 
 			</h2>
 		<nav class="flex gap-5 mt-4 flex-wrap">
 			<SocialPill href="https://www.linkedin.com/in/miguel-angel-aguirre-florez-b970b1209/">
@@ -70,20 +69,19 @@ import User from '../icons/User.astro';
 			<Experience></Experience>
 		</SectionContainer>
 
-		<SectionContainer id = "proyectos">
+		<SectionContainer id = "proyectos" class="mt-30">
 			<h2 class="text-4xl font-semibold mb-8 flex gap-x-4 items-center">
 				<CodeCircle class = "size-10"></CodeCircle>
 				Proyectos</h2>
 			<Projects></Projects>
 		</SectionContainer>
 
-		<SectionContainer id = "sobre-mi" class="section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
+		<SectionContainer id = "sobre-mi" class=" mt-30 section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
 			<h2 class="text-4xl font-semibold mb-8 flex gap-x-4 items-center">
 				<User class = "size-10"></User>
 				Sobre Mi</h2>
 			<AboutMe></AboutMe>
 		</SectionContainer>
-
 	</main>
 </div>
 
