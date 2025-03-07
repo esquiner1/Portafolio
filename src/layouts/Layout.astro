@@ -8,6 +8,27 @@ import '../styles/global.css'
 <!doctype html>
 <html lang="en">
 	<head>
+
+		<!-- Google Tag Manager -->
+	<script>
+	(function(w,d,s,l,i){
+		(w as any)[l]=(w as any)[l]||[]; 
+		(w as any)[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+		
+		var f = d.getElementsByTagName(s)[0],
+		j= d.createElement(s) as HTMLScriptElement;
+		var dl=l!='dataLayer'?'&l='+l:'';
+		
+		j.async=true;
+		j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+
+		if(f && f.parentNode){
+			f.parentNode.insertBefore(j,f);
+		}
+	})(window,document,'script','dataLayer','GTM-52BZFBD2');
+	</script>
+	<!-- End Google Tag Manager -->
+
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/cpu.svg" />
@@ -24,13 +45,19 @@ import '../styles/global.css'
 		  
 			gtag('js', new Date());
 			gtag('config', 'G-NSS6PQ9R5H');
-
-			console.log(window.dataLayer);
-			console.log(typeof gtag);
 		  </script>
 		  
 	</head>
 	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-52BZFBD2"
+				height="0" width="0" style="display:none;visibility:hidden">
+			</iframe>
+		</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+
 		<div 
 			class="fixed top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]">
 		</div>
